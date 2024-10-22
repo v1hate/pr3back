@@ -4,7 +4,7 @@ from .routes import main as main_routes
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
+    CORS(app, resources={r"/*": {"origins": ["https://pr3vic.netlify.app/"]}})
 
     app.register_blueprint(main_routes)
 
